@@ -1,0 +1,30 @@
+.relatedShowsDiv {
+  background-color: var(--background-color);
+  border-style: solid;
+  border-color: var(--accent);
+  border-color: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+
+  padding-left: 5vw;
+
+  width: 105%;
+  max-width: 105%;
+
+  margin-left: -8px;
+}
+
+.showCardsDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 70%;
+}
+
+.showCard img{
+  width: 215px;
+  height: auto;
+}

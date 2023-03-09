@@ -1,0 +1,163 @@
+.relative {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+
+    top: 0px;
+    width: 100%;
+    left:0px;
+    right:0px;
+    margin:auto;
+
+    background:transparent;
+    /* background-image: linear-gradient(var(--background-color),rgba(0,0,0,0)); */
+    background-color: var(--header-color);
+    color: var(--text-color);
+    height: 7vh;
+    border-color: aqua;
+    border-style: solid;
+    border-top:none;
+    border-right: none;
+    border-left:none;
+}
+
+.headerLeft{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+.headerRight{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+}
+
+
+.headerLeft svg {
+    margin-left: 50px;
+}
+
+.headerLeft h1 {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.searchInner {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: flex-start;
+    width:auto;
+}
+
+.searchInner input[type=text] {
+    background-color: white;
+    color: gray;
+    border-radius: 0px;
+    margin-left: 0px;
+    padding: 12px;
+    padding-right: 150px;
+    border: none;
+    margin-top: 0px;
+    margin-right: 0px;
+    font-size: 17px;
+    float: right;
+    height: inherit;
+}
+.searchInner button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 0px;
+    margin-right: 0px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    height: 44px;
+    z-index: 300;
+}
+
+.searchInner img {
+    float: right;
+    padding-top: 3px;
+    height: 28px;
+    width: auto;
+}
+
+.dropdown {
+    position: absolute;
+    background-color: var(--button-color);
+    width:415px;
+    font-size: 1em;
+}
+
+.dropdownSearch {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--accent);
+}
+
+.dropdownRow{
+    display: flex;
+    flex-direction: row;
+}
+
+/* targets all but the first child and replaces the ruleset */
+.dropdown > .dropdownRow ~ .dropdownRow{
+    display: flex;
+    flex-direction: row;
+    border: dashed 0.5px lightgray;
+    border-bottom: transparent;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+.dropdownRow img {
+    width: 70px; 
+    padding: 6px;
+    height: auto;
+}
+
+
+.dropdown h2 {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.dropdown p {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.barAccent {
+    background-color: var(--accent);
+    height: 40px;
+}
+
+.riko {
+    width: 100px;
+    height: auto;
+    translate: -90px 25px;
+    z-index: -3;
+}
+
+.test2 {
+    transform: translate(0,20px);
+}
+
+.headerLeft a {
+    text-decoration: none;
+
+    color: var(--text-color)
+}
