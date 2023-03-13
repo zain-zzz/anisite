@@ -1,15 +1,10 @@
 import usePathname from "next/navigation";
 import Link from "next/link";
-import classNames from "classnames";
-import axios from "axios";
 
 import React, { useState, useEffect } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { tempSolution } from "@/public/tempSolution";
-
-import arrowImage from "../../public/play-button.png"
-import arrowImageHollow from "../../public/play-button-arrowhead.png"
 
 import styles from "./Spotlight.module.css";
 
@@ -49,7 +44,7 @@ export default function Spotlight({shows}:any) {
   const slideInProperties = {
     indicators: true,
     scale: 1.2,
-    duration: 20000,
+    duration: 5000,
     transitionDuration: 200,
     infinite: true,
 
@@ -72,7 +67,7 @@ export default function Spotlight({shows}:any) {
   };
 
   useEffect(() => {
-    topAiring.forEach((show) => {console.log(show.episodes[0].url)})
+    // topAiring.forEach((show) => {console.log(show.episodes[0].url)})
   }, []);
 
   useEffect(() => {
@@ -84,6 +79,7 @@ export default function Spotlight({shows}:any) {
         setBackgroundmage(imageToSet)
       }
     }, 500)
+    
   }, [])
 
   return (

@@ -8,9 +8,6 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { tempSolution } from "@/public/tempSolution";
 
-import arrowImage from "../../public/play-button.png";
-import arrowImageHollow from "../../public/play-button-arrowhead.png";
-
 import styles from "./AnimeInfo.module.css";
 
 interface ShowInterface {
@@ -36,7 +33,6 @@ interface ShowInterface {
 }
 
 export default function AnimeInfo({ show }: any) {
-  // const [topAiring, setTopAiring] = useState<ShowsArray>([]);
 
   function getShowInfo() {
     switch(show.type.split(" ")[0]) {
@@ -157,18 +153,3 @@ export default function AnimeInfo({ show }: any) {
     </div>
   );
 }
-
-
-// show.type.length > 5 ? (
-//   <p>
-//     <b>Season: </b>
-//     {`${show.type.split(" ")[0].toLowerCase()} ${show.type
-//       .split(" ")[1]
-//       .toLowerCase()}`}
-//   </p>
-// ) : (
-//   <p>
-//     <b>Release Year: </b>
-//     {show.releaseDate}
-//   </p>
-// )

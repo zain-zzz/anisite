@@ -1,7 +1,4 @@
-import usePathname from "next/navigation";
 import Link from "next/link";
-import classNames from "classnames";
-import logos from "../../public/logo.json"
 import searchImg from "../../public/searchicon.png"
 import Image from 'next/image'
 import axios from "axios";
@@ -9,9 +6,6 @@ import axios from "axios";
 import React, { useState, useEffect, useRef } from "react";
 
 import styles from "./Header.module.css";
-
-const logo1 = logos.logo1;
-const logo2 = logos.logo2;
 
 export default function Header({}) {
 
@@ -37,7 +31,7 @@ export default function Header({}) {
   }
 
   function onSearch(searchTerm:string){
-    // console.log(searchTerm)
+    // change when you add a results page
   }
 
 
@@ -82,7 +76,7 @@ export default function Header({}) {
 
   const wrapperRef = useRef(null)
   checkIfFocused(wrapperRef)
-  
+
 
   return (
     <div className={styles.relative}>
@@ -92,13 +86,8 @@ export default function Header({}) {
           <Link href={"/"}>
             <h1 className={styles.test2}>Anisite</h1>
           </Link>
-          {/* temp? */}
-          <img className={styles.riko} src={"https://cdn.discordapp.com/attachments/766665303589126174/1082094621137580062/02_riko.png"}/>
 
-
-          {/* <svg width={164} height={50}><path d={logo2} fill="#aa42f5" /></svg> */}
-
-          {/* <a className={styles.active} href="#home">Home</a> */}
+          <img className={styles.icon} src={"https://cdn.discordapp.com/attachments/766665303589126174/1082094621137580062/02_riko.png"}/>
 
           <div className={styles.searchBar} ref={wrapperRef}>
             <div className={styles.searchInner}>
@@ -141,10 +130,3 @@ export default function Header({}) {
     </div>
   );
 }
-
-{/* 
-<form action="/action_page.php">
-  <input type="text" placeholder="Search.." name="search"/>
-  <button type="submit"><Image src={searchImg} alt=''/></button>
-</form> 
-*/}

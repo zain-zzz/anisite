@@ -8,9 +8,6 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { tempSolution } from "@/public/tempSolution";
 
-import arrowImage from "../../public/play-button.png";
-import arrowImageHollow from "../../public/play-button-arrowhead.png";
-
 import styles from "./Related.module.css";
 
 interface ShowInterface {

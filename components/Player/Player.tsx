@@ -8,8 +8,6 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { tempSolution } from "@/public/tempSolution";
 
-import arrowImage from "../../public/play-button.png";
-import arrowImageHollow from "../../public/play-button-arrowhead.png";
 import styles from "./Player.module.css";
 
 export default function AnimeInfo({ show }: any) {
@@ -34,8 +32,6 @@ export default function AnimeInfo({ show }: any) {
       },
     ],
   });
-
-  const [episodeMap, setEpisodeMap] = useState<number>(0);
 
   const [currentShow, setCurrentShow] = useState<any>(show);
 
@@ -114,7 +110,6 @@ export default function AnimeInfo({ show }: any) {
 
   useEffect(() => {
     getShowInfo(showId);
-    //getShowEpisodes(showId)
   }, []);
 
   async function getShowInfo(id: string) {
@@ -124,25 +119,6 @@ export default function AnimeInfo({ show }: any) {
 
     setShowInfo(data);
   }
-
-  //   async function getShowEpisodes(id: string) {
-
-  //     const options = {
-  //       method: 'GET',
-  //       url: 'https://jikan1.p.rapidapi.com/search/anime',
-  //       params: {q: 'Attack on Titan'},
-  //       headers: {
-  //         'X-RapidAPI-Key': '3ec5918574mshbf8d75f490e1ae9p129e0ejsn15fc28b91342',
-  //         'X-RapidAPI-Host': 'jikan1.p.rapidapi.com'
-  //       }
-  //     };
-
-  //     axios.request(options).then(function (response) {
-  //         console.log(response.data);
-  //     }).catch(function (error) {
-  //         console.error(error);
-  //     });
-  //   }
 
   return (
     <div className={styles.containerDiv}>
