@@ -9,8 +9,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Related from "../../components/Related/Related"
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const getServerSideProps = async (context: any) => {
 
   const id = context.params.id;
@@ -30,11 +28,8 @@ export const getServerSideProps = async (context: any) => {
 
 export default function Home({ show }: any) {
   useEffect(() => {
-
   });
-
   //   const animeId = props.animeId
-
   return (
     <>
       <Head>
@@ -44,7 +39,6 @@ export default function Home({ show }: any) {
       </Head>
       <AnimeInfo show={show} />
       <Related show={show} />
-      
       <Header />
     </>
   );

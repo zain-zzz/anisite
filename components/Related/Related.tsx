@@ -35,54 +35,46 @@ interface ShowInterface {
 export default function Related({ show }: any) {
   // const [topAiring, setTopAiring] = useState<ShowsArray>([]);
 
-
-  function getGenres(){
-    let myArray = []
+  function getGenres() {
+    let myArray = [];
     for (var key in show.genres) {
-      myArray.push(show.genres[key])
+      myArray.push(show.genres[key]);
     }
-    return myArray
+    return myArray;
   }
 
-  function genresToString(){
-    let genres = getGenres()
-    let string = ' '
-    genres.forEach(genre => {
-      string += (genre + ' ')
-    })
-    return string
+  function genresToString() {
+    let genres = getGenres();
+    let string = " ";
+    genres.forEach((genre) => {
+      string += genre + " ";
+    });
+    return string;
   }
-
-  useEffect(() => {}, []);
-
-  useEffect(() => {}, []);
-
-  const array = [1,2,3,4,5]
-
+  
   return (
     <>
-    <div className={styles.relatedShowsDiv}>
-
+      <div className={styles.relatedShowsDiv}>
         <h1>Related Shows</h1>
 
-      <div className={styles.showCardsDiv}>
-      {tempSolution.map((show) => (
-        
-        <div className={styles.showCard}>
-          <Link href={"/anime/" + show.id}>
-            <div>
-              <img src={show.image}/>
-              <p>{show.title.slice(0,20)} {show.title.length>20&& "..."}</p>
+        <div className={styles.showCardsDiv}>
+          {tempSolution.map((show, index) => (
+            <div key={index} className={styles.showCard}>
+              <Link href={"/anime/" + show.id}>
+                <div>
+                  <img src={show.image} />
+                  <p>
+                    {show.title.slice(0, 20)} {show.title.length > 20 && "..."}
+                  </p>
+                </div>
+              </Link>
             </div>
-          </Link>
+          ))}
         </div>
-      ))}
       </div>
-    </div>
     </>
   );
 }
-
 
 // show.type.length > 5 ? (
 //   <p>
